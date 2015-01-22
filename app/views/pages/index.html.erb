@@ -1,0 +1,14 @@
+<h1>Welcome to the home page!!</h1>
+
+<% if @current_user %>
+    Hello again, <%= @current_user.name %>
+    <br><br>
+    <a href="/auth/logout">logout</a>
+<% else %>
+    You are not logged in.<br><br>
+    Login with:
+    <a href="/auth/facebook">Facebook</a> | 
+    <a href="/auth/twitter">Twitter</a> | 
+    <a href="/auth/google_oauth2">Google</a>
+    <br><br>
+<% end %>
